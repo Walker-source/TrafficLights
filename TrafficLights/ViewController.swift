@@ -14,22 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet var redLightView: UIView!
     @IBOutlet var startButton: UIButton!
     
-    private let trafficLightsSetting = (
-        lightOff: 0.3,
-        lightOn: 1.0,
-        corner: 65.0
-    )
+    private let trafficLightsSetting = (lightOff: 0.3, lightOn: 1.0)
     private var trafficLightsStage = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         startButton.layer.cornerRadius = 10
         redLightView.alpha = trafficLightsSetting.lightOff
-        redLightView.layer.cornerRadius = trafficLightsSetting.corner
+        redLightView.layer.cornerRadius = redLightView.frame.size.height/2
         orangeLightView.alpha = trafficLightsSetting.lightOff
-        orangeLightView.layer.cornerRadius = trafficLightsSetting.corner
+        orangeLightView.layer.cornerRadius = orangeLightView.frame.size.height/2
         greenLightView.alpha = trafficLightsSetting.lightOff
-        greenLightView.layer.cornerRadius = trafficLightsSetting.corner
+        greenLightView.layer.cornerRadius = greenLightView.frame.size.height/2
     }
 
     @IBAction func startButtonDidTapped() {
