@@ -45,7 +45,8 @@ class ViewController: UIViewController {
             orangeLightView.alpha = trafficLightsSetting.lightOff
             greenLightView.alpha = trafficLightsSetting.lightOn
             trafficLightsStage = 1
-        default: redLightView.alpha = trafficLightsSetting.lightOff
+        default:
+            redLightView.alpha = trafficLightsSetting.lightOff
             orangeLightView.alpha = trafficLightsSetting.lightOff
             greenLightView.alpha = trafficLightsSetting.lightOff
             
