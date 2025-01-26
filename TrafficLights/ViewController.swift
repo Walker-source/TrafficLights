@@ -14,8 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet var redLightView: UIView!
     @IBOutlet var startButton: UIButton!
     
-    let trafficLightsSetting = (lightOff: 0.3, lightOn: 1.0, corner: 65.0)
-    var trafficLightsStage = 1
+    private let trafficLightsSetting = (
+        lightOff: 0.3,
+        lightOn: 1.0,
+        corner: 65.0
+    )
+    private var trafficLightsStage = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
