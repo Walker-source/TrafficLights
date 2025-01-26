@@ -13,12 +13,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLights" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Ua3-Oc-66z">
-                                <rect key="frame" x="130" y="89" width="133" height="460"/>
+                                <rect key="frame" x="130" y="79" width="133" height="460"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlP-GI-db2">
                                         <rect key="frame" x="1.6666666666666572" y="0.0" width="130" height="130"/>
@@ -44,8 +44,8 @@
                                     <constraint firstItem="9bS-EO-3Tj" firstAttribute="height" secondItem="UlP-GI-db2" secondAttribute="height" id="a6l-BD-f3i"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2a-p2-ZfZ">
-                                <rect key="frame" x="139" y="718" width="115" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2a-p2-ZfZ">
+                                <rect key="frame" x="139" y="708" width="115" height="60"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="Zie-qP-qVP"/>
@@ -64,14 +64,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ua3-Oc-66z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="Bby-gM-zOE"/>
                             <constraint firstItem="Ua3-Oc-66z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="H3Q-Yu-BX2"/>
-                            <constraint firstItem="Ua3-Oc-66z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="YDL-0i-S1X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h2a-p2-ZfZ" secondAttribute="bottom" constant="50" id="eFa-NQ-QBY"/>
                             <constraint firstItem="h2a-p2-ZfZ" firstAttribute="top" secondItem="Ua3-Oc-66z" secondAttribute="bottom" constant="169" id="eXv-PD-yhY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ua3-Oc-66z" secondAttribute="trailing" constant="130" id="ehW-3I-0vE"/>
                             <constraint firstItem="h2a-p2-ZfZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n83-vx-dA5"/>
-                            <constraint firstAttribute="bottom" secondItem="Ua3-Oc-66z" secondAttribute="bottom" constant="299" id="oBo-vb-ZAV"/>
+                            <constraint firstItem="Ua3-Oc-66z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="phB-Kf-W11"/>
                         </constraints>
                     </view>
                     <connections>
