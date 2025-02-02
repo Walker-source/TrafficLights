@@ -16,6 +16,10 @@ final class ViewController: UIViewController {
     @IBOutlet private var switchLightButton: UIButton!
     @IBOutlet private var resetButton: UIButton!
     
+    private var halfViewSide: CGFloat {
+        redView.frame.width / 2
+    }
+    
     private let trafficLightsStage = (lightIsOff: 0.3, lightIsOn: 1.0)
     private var trafficLightsColorSwitch = TrafficLightColorSwitch.red
     
@@ -30,9 +34,9 @@ final class ViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        greenView.layer.cornerRadius = greenView.frame.width / 2
-        orangeView.layer.cornerRadius = orangeView.frame.width / 2
-        redView.layer.cornerRadius = redView.frame.width / 2
+        redView.layer.cornerRadius = halfViewSide
+        orangeView.layer.cornerRadius = halfViewSide
+        greenView.layer.cornerRadius = halfViewSide
     }
 
     @IBAction func resetButtonDidTapped(_ sender: UIButton) {
