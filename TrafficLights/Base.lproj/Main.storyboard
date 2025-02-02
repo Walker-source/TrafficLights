@@ -17,66 +17,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlP-GI-db2">
-                                <rect key="frame" x="155" y="78" width="130" height="130"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="Mvf-qo-Ppr"/>
-                                    <constraint firstAttribute="height" constant="130" id="PYE-us-qjC"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCQ-B6-pQG">
-                                <rect key="frame" x="155" y="248" width="130" height="130"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2a-p2-ZfZ">
-                                <rect key="frame" x="154" y="849" width="132" height="57"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="Zie-qP-qVP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="START">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="startButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="eDk-XB-laK"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bS-EO-3Tj">
-                                <rect key="frame" x="155" y="418" width="130" height="130"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="rCh-gJ-bZa">
+                                <rect key="frame" x="155" y="82" width="130" height="470"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlP-GI-db2">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="UlP-GI-db2" secondAttribute="height" multiplier="1:1" id="TCZ-AW-5kI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCQ-B6-pQG">
+                                        <rect key="frame" x="0.0" y="170" width="130" height="130"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bS-EO-3Tj">
+                                        <rect key="frame" x="0.0" y="340" width="130" height="130"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3Ug-OA-XE3">
+                                <rect key="frame" x="73" y="845" width="294" height="57"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2a-p2-ZfZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="57"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="132" id="PMw-Pe-wey"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="START">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="switchLightButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rq6-r1-ayD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Te-KZ-wBI">
+                                        <rect key="frame" x="162" y="0.0" width="132" height="57"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="RESET">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ioc-Ey-W7o"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yCQ-B6-pQG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3yL-pO-IKC"/>
-                            <constraint firstItem="9bS-EO-3Tj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4R8-of-Sza"/>
-                            <constraint firstItem="UlP-GI-db2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ADA-Am-IKG"/>
-                            <constraint firstItem="UlP-GI-db2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FLd-16-hyP"/>
-                            <constraint firstItem="h2a-p2-ZfZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NKr-aU-rxl"/>
-                            <constraint firstItem="yCQ-B6-pQG" firstAttribute="top" secondItem="UlP-GI-db2" secondAttribute="bottom" constant="40" id="Tzd-Gi-xeg"/>
-                            <constraint firstItem="yCQ-B6-pQG" firstAttribute="width" secondItem="UlP-GI-db2" secondAttribute="width" id="aC3-Fd-B2m"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h2a-p2-ZfZ" secondAttribute="bottom" constant="16" id="b7V-if-QTD"/>
-                            <constraint firstItem="9bS-EO-3Tj" firstAttribute="top" secondItem="yCQ-B6-pQG" secondAttribute="bottom" constant="40" id="cMu-Sn-ciL"/>
-                            <constraint firstItem="yCQ-B6-pQG" firstAttribute="height" secondItem="UlP-GI-db2" secondAttribute="height" id="q4s-Qg-pV2"/>
-                            <constraint firstItem="9bS-EO-3Tj" firstAttribute="height" secondItem="UlP-GI-db2" secondAttribute="height" id="x9x-ep-g7w"/>
-                            <constraint firstItem="9bS-EO-3Tj" firstAttribute="width" secondItem="UlP-GI-db2" secondAttribute="width" id="zmk-1z-NfI"/>
+                            <constraint firstItem="rCh-gJ-bZa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Ab4-YS-nTP"/>
+                            <constraint firstItem="rCh-gJ-bZa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IOW-TD-McU"/>
+                            <constraint firstItem="3Ug-OA-XE3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UTz-cd-21P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Ug-OA-XE3" secondAttribute="bottom" constant="20" id="fQq-VF-tmV"/>
+                            <constraint firstItem="rCh-gJ-bZa" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.491632" id="nnS-Cw-jlx"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenLightView" destination="9bS-EO-3Tj" id="dZ4-8C-P8e"/>
-                        <outlet property="orangeLightView" destination="yCQ-B6-pQG" id="0KY-gg-bU8"/>
-                        <outlet property="redLightView" destination="UlP-GI-db2" id="JWq-ht-eoV"/>
-                        <outlet property="startButton" destination="h2a-p2-ZfZ" id="pWH-fC-m5H"/>
+                        <outlet property="greenView" destination="9bS-EO-3Tj" id="YE5-px-1f9"/>
+                        <outlet property="orangeView" destination="yCQ-B6-pQG" id="Hi1-PU-HDd"/>
+                        <outlet property="redView" destination="UlP-GI-db2" id="AQ0-SN-Bd7"/>
+                        <outlet property="resetButton" destination="9Te-KZ-wBI" id="0Ng-mK-yuK"/>
+                        <outlet property="switchLightButton" destination="h2a-p2-ZfZ" id="oFZ-rU-kwI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="-27"/>
+            <point key="canvasLocation" x="130.90909090909091" y="-27.615062761506277"/>
         </scene>
     </scenes>
     <resources>
@@ -87,13 +103,13 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
