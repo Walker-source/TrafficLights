@@ -42,6 +42,8 @@ final class ViewController: UIViewController {
     @IBAction func resetButtonDidTapped(_ sender: UIButton) {
         switchLightButton.setTitle("START", for: .normal)
         
+        trafficLightsColorSwitch = .red
+        
         greenView.alpha = trafficLightsStage.lightIsOff
         redView.alpha = trafficLightsStage.lightIsOff
         orangeView.alpha = trafficLightsStage.lightIsOff
