@@ -14,6 +14,7 @@ final class ViewController: UIViewController {
     @IBOutlet private var redView: UIView!
     
     @IBOutlet private var switchLightButton: UIButton!
+    @IBOutlet private var resetButton: UIButton!
     
     private let trafficLightsStage = (lightIsOff: 0.3, lightIsOn: 1.0)
     private var trafficLightsColorSwitch = TrafficLightColorSwitch.red
@@ -21,16 +22,26 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         switchLightButton.layer.cornerRadius = 10
+        resetButton.layer.cornerRadius = 10
         
         greenView.alpha = trafficLightsStage.lightIsOff
         orangeView.alpha = trafficLightsStage.lightIsOff
         redView.alpha = trafficLightsStage.lightIsOff
-        
+    }
+    
+    override func viewWillLayoutSubviews() {
         greenView.layer.cornerRadius = greenView.frame.width / 2
         orangeView.layer.cornerRadius = orangeView.frame.width / 2
         redView.layer.cornerRadius = redView.frame.width / 2
     }
 
+    @IBAction func resetButtonDidTapped(_ sender: UIButton) {
+        switchLightButton.setTitle("START", for: .normal)
+        greenView.alpha = trafficLightsStage.lightIsOff
+        redView.alpha = trafficLightsStage.lightIsOff
+        orangeView.alpha = trafficLightsStage.lightIsOff
+    }
+    
     @IBAction func switchLightButtonDidTapped() {
         if switchLightButton.currentTitle != "Next" {
             switchLightButton.setTitle("NEXT", for: .normal)
