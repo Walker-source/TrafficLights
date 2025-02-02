@@ -8,7 +8,7 @@
 import UIKit
 
 final class ViewController: UIViewController {
-
+//MARK: - IB Outlets
     @IBOutlet private var greenView: UIView!
     @IBOutlet private var orangeView: UIView!
     @IBOutlet private var redView: UIView!
@@ -16,13 +16,16 @@ final class ViewController: UIViewController {
     @IBOutlet private var switchLightButton: UIButton!
     @IBOutlet private var resetButton: UIButton!
     
+//    MARK: - Private Properties
     private var halfSideView: CGFloat {
         redView.frame.width / 2
     }
     
     private let trafficLightsStage = (lightIsOff: 0.3, lightIsOn: 1.0)
     private var trafficLightsColorSwitch = TrafficLightColorSwitch.red
+    private var redOrGreen = TrafficLightColorSwitch.green
     
+//    MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         switchLightButton.layer.cornerRadius = 10
@@ -39,6 +42,7 @@ final class ViewController: UIViewController {
         greenView.layer.cornerRadius = halfSideView
     }
 
+//    MARK: - IB Actions
     @IBAction func resetButtonDidTapped(_ sender: UIButton) {
         switchLightButton.setTitle("START", for: .normal)
         
@@ -57,16 +61,24 @@ final class ViewController: UIViewController {
         switch trafficLightsColorSwitch {
         case .red:
             redView.alpha = trafficLightsStage.lightIsOn
-            greenView.alpha = trafficLightsStage.lightIsOff
+            orangeView.alpha = trafficLightsStage.lightIsOff
             trafficLightsColorSwitch = .yellow
+            redOrGreen = .green
         case .yellow:
-            redView.alpha = trafficLightsStage.lightIsOff
-            orangeView.alpha = trafficLightsStage.lightIsOn
-            trafficLightsColorSwitch = .green
+            if redOrGreen == .green {
+                redView.alpha = trafficLightsStage.lightIsOff
+                orangeView.alpha = trafficLightsStage.lightIsOn
+                trafficLightsColorSwitch = .green
+            } else {
+                greenView.alpha = trafficLightsStage.lightIsOff
+                orangeView.alpha = trafficLightsStage.lightIsOn
+                trafficLightsColorSwitch = .red
+            }
         case .green:
             orangeView.alpha = trafficLightsStage.lightIsOff
             greenView.alpha = trafficLightsStage.lightIsOn
-            trafficLightsColorSwitch = .red
+            trafficLightsColorSwitch = .yellow
+            redOrGreen = .red
         }
         
     }
