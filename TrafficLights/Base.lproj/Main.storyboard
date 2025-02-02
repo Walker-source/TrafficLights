@@ -83,7 +83,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenView" destination="9bS-EO-3Tj" id="YE5-px-1f9"/>
+                        <outlet property="greenView" destination="9bS-EO-3Tj" id="p8A-ai-2vy"/>
                         <outlet property="orangeView" destination="yCQ-B6-pQG" id="Hi1-PU-HDd"/>
                         <outlet property="redView" destination="UlP-GI-db2" id="AQ0-SN-Bd7"/>
                         <outlet property="resetButton" destination="9Te-KZ-wBI" id="0Ng-mK-yuK"/>
