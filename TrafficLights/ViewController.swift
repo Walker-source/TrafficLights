@@ -16,7 +16,7 @@ final class ViewController: UIViewController {
     @IBOutlet private var switchLightButton: UIButton!
     @IBOutlet private var resetButton: UIButton!
     
-    private var halfViewSide: CGFloat {
+    private var halfSideView: CGFloat {
         redView.frame.width / 2
     }
     
@@ -34,9 +34,9 @@ final class ViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        redView.layer.cornerRadius = halfViewSide
-        orangeView.layer.cornerRadius = halfViewSide
-        greenView.layer.cornerRadius = halfViewSide
+        redView.layer.cornerRadius = halfSideView
+        orangeView.layer.cornerRadius = halfSideView
+        greenView.layer.cornerRadius = halfSideView
     }
 
     @IBAction func resetButtonDidTapped(_ sender: UIButton) {
