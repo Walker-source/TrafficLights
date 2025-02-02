@@ -65,7 +65,7 @@ final class ViewController: UIViewController {
     }
 }
 
-//MARK: - Traffic light setup
+//MARK: - TrafficLightColorSwitch
 
 private extension ViewController {
     enum TrafficLightColorSwitch {
